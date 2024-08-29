@@ -125,7 +125,7 @@ public class Paciente implements Serializable {
 
     @Override
     public String toString() {
-        return "bean.Paciente[ idpaciente=" + idpaciente + " ]";
+        return this.nome;
     }
     
 }

@@ -105,7 +105,7 @@ public class Medico implements Serializable {
 
     @Override
     public String toString() {
-        return "bean.Medico[ idmedico=" + idmedico + " ]";
+        return this.nome;
     }
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {
