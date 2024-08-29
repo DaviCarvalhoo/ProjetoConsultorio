@@ -3,6 +3,7 @@
   <persistence-unit name="dbconsultorio?serverTimezone=UTCPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>bean.Medico</class>
+    <class>bean.Paciente</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dbconsultorio?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
