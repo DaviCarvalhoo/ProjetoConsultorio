@@ -97,6 +97,7 @@ public class JFrmCadConsulta extends JPanel {
         bindingGroup.addBinding(binding);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.hora}"), horaField, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        binding.setSourceUnreadableValue("null");
         bindingGroup.addBinding(binding);
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ, masterTable, org.jdesktop.beansbinding.ELProperty.create("${selectedElement != null}"), horaField, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
@@ -337,7 +338,11 @@ public class JFrmCadConsulta extends JPanel {
             public void run() {
                 JFrame frame = new JFrame();
                 frame.setContentPane(new JFrmCadConsulta());
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+                frame.setBounds((screenSize.width-632)/2,(screenSize.height-312)/2 , 632,312);
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.setTitle("Agendamento de Consulta");;
+//                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
             }

@@ -287,7 +287,10 @@ public class JCadMedico extends JPanel {
             public void run() {
                 JFrame frame = new JFrame();
                 frame.setContentPane(new JCadMedico());
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+                frame.setBounds((screenSize.width-404)/2,(screenSize.height-275)/2 , 404,275);
+                frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                frame.setTitle("Cadastro de Médico");
                 frame.pack();
                 frame.setVisible(true);
             }

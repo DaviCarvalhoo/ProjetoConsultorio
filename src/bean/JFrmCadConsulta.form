@@ -276,7 +276,9 @@
     </Component>
     <Component class="javax.swing.JTextField" name="horaField">
       <BindingProperties>
-        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.hora}" target="horaField" targetPath="text" updateStrategy="0" immediately="false"/>
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.hora}" target="horaField" targetPath="text" updateStrategy="0" immediately="false">
+          <Property name="incompletePathValue" type="java.lang.String" value="null"/>
+        </BindingProperty>
         <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="horaField" targetPath="enabled" updateStrategy="1" immediately="false"/>
       </BindingProperties>
     </Component>
