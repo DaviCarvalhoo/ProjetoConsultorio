@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7bab7b18-bf85-4f8f-bb26-a792966c77f6">
+	<property name="ireport.zoom" value="1.6105100000000012"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     paciente.`idpaciente` AS idpaciente,
+     paciente.`cpf` AS cpf,
+     paciente.`nome` AS nome
+FROM
+     `paciente` paciente]]>
+	</queryString>
+	<field name="idpaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="61" uuid="d9ee5f38-99c7-4e9e-9179-728295086ae0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="201" y="18" width="167" height="20" uuid="173b66f8-e9f1-4f84-8db5-3fa8c59f9865"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Pacientes]]></text>
+			</staticText>
+			<image>
+				<reportElement x="38" y="0" width="76" height="61" uuid="af25e93c-ccdc-4460-996a-6c782894857e"/>
+				<imageExpression><![CDATA["C:\\Users\\Davi\\git_projects\\ProjetoConsultorio\\src\\icones\\farmacia.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="38" uuid="5bcec359-6a4f-4be2-bec1-be773b1458a8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="88" y="12" width="100" height="20" uuid="7af35ec3-8ea7-422a-b9e8-40dacc8a9d7c"/>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="12" width="100" height="20" uuid="954d6c60-ce5c-43b4-9f3d-13f9151377d5"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="12" width="100" height="20" uuid="8486daf5-f153-4e39-ba22-efadb0ca7229"/>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20" uuid="cee8a5cb-7138-490f-ae45-334d61dd4a7d"/>
+			</rectangle>
+			<textField>
+				<reportElement x="88" y="0" width="100" height="20" uuid="2c7a9528-ef7f-4a99-8820-5df153ffb66c"/>
+				<textFieldExpression><![CDATA[$F{idpaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="0" width="180" height="20" uuid="b33f5ab9-0b2a-4b2e-be1e-f4ffdb755806"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="159" height="20" uuid="63d8e763-bb7c-41db-b28d-6c7d3b191d26"/>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

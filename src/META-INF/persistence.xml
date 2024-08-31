@@ -5,6 +5,7 @@
     <class>bean.Medico</class>
     <class>bean.Paciente</class>
     <class>bean.Consulta</class>
+    <class>bean.Usuario</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dbconsultorio?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

@@ -68,6 +68,11 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton3);
         jToolBar1.add(jSeparator1);
 
@@ -97,9 +102,19 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jMenu1.setText("Cadastro");
 
         jMenuItem1.setText("Paciente");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Medico");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setText("Usuario");
@@ -110,6 +125,11 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jMenu2.setText("Agendamento");
 
         jMenuItem4.setText("Consulta");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
@@ -165,6 +185,26 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         JFrmCadConsulta.main(null);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        JCadPaciente.main(null);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        JCadMedico.main(null);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        JFrmCadConsulta.main(null);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        JFrmCadUsuario.main(null);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
